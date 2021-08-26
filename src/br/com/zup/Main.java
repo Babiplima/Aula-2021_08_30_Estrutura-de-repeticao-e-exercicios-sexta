@@ -6,9 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        //Variáveis que recebem valores
-
-        //Instanciando o Scanner
+       //Instanciando o Scanner
         Scanner leitor = new Scanner(System.in);
 
         //Recebendo os números pelos usuários
