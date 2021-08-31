@@ -4,26 +4,46 @@ import java.util.Scanner;
 
 public class ContarNumeroImpar {
     public static void main(String[] args) {
+
+        //Variáveis
+
+        double contador = 0;
+        double qtdNumeros = 0;
+        double numerosRecebido = 0;
+        double maiorNumero = 0;
+        double menorNumero = 0;
+
         //Instaciar o Scanner
 
         Scanner leitor = new Scanner(System.in);
-        double contador = 1;
+
+        //Pedindo o número ao usuário
+
         System.out.println("Digite a quantidade de números que você deseja ");
-        int qtdDeRepeticao = leitor.nextInt();
-        double lendoDoUsuario;
-        double soma = 0;
-        int contadorNumerosImpar = 0;
+        qtdNumeros = leitor.nextDouble();
 
-        while (contador <= qtdDeRepeticao) {
-            System.out.println("Digite um número" + contador);
-            lendoDoUsuario = leitor.nextDouble();
+        //Comparando número maior
 
-            if (lendoDoUsuario % 2 == 1){
-                contadorNumerosImpar+=1;
+        while (contador < qtdNumeros) {
+            System.out.println("Digite o número ");
+            numerosRecebido = leitor.nextDouble();
+            if (numerosRecebido > maiorNumero) {
+                maiorNumero = numerosRecebido;
             }
-            contador ++;
-
+            contador++;
         }
-        System.out.println(contadorNumerosImpar);
+        System.out.println("Este é o maior número " + maiorNumero);
+
+        //Comparando número menor
+
+        while (contador > qtdNumeros) {
+            System.out.println("Digite o número ");
+            numerosRecebido = leitor.nextDouble();
+            if (numerosRecebido < menorNumero) {
+                menorNumero = numerosRecebido;
+            }
+            contador++;
+        }
+        System.out.println("Este é o menor número " + menorNumero);
     }
 }
